@@ -1,0 +1,16 @@
+h1{
+    margin: 0;
+}
+
+footer{
+    /* height: 100px; */
+    background-color: #212529;
+    color: white;
+    padding: 8px 0px 8px 0px;
+}
+
+.page{
+    color: white;
+    background-color: blue;
+    min-height: calc(100vh - 156px);
+}
