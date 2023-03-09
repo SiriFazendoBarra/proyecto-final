@@ -1,16 +1,62 @@
+.App{
+    background-color: black;
+    display: grid;
+    row-gap: 10px;
+    grid-template-areas: "navbar"
+                            "nav2"
+                            "view"
+                            "footer";
+}
+
+.App>:nth-child(1){
+    grid-area: navbar;
+}
+.App>:nth-child(2){
+    grid-area: nav2;
+}
+.App>:nth-child(3){
+    grid-area: view;
+}
+.App>:nth-child(4){
+    grid-area: footer;
+}
+
 h1{
     margin: 0;
 }
 
-footer{
-    /* height: 100px; */
-    background-color: #212529;
-    color: white;
-    padding: 8px 0px 8px 0px;
+.NavBar{
+    background-color:#071E3D;
+}
+.Nav2{
+    background-color: black;
 }
 
 .page{
     color: white;
-    background-color: blue;
+    background-color: #071E3D;
     min-height: calc(100vh - 156px);
 }
+.divNav2{
+    background-color: #071E3D;
+}
+
+footer{
+    /* height: 100px; */
+    background-color: #071E3D;
+    color: white;
+    padding: 8px 0px 8px 0px;
+}
+.InputGroup{
+    max-width: 500px;
+}
+.Nav{
+    max-height: 400px;
+}
+.logo{
+    max-width: 70px;
+}
+.formLogin{
+ width: 500px;
+}
+

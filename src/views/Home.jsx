@@ -1,7 +1,10 @@
 export default function Home (){
     return(
-        <div className="container page">
-            <h1>Home</h1>
+        <div className="page">
+            <div className="container">
+                <h1>Home</h1>
+            </div>
+            
         </div>
     )
 }
