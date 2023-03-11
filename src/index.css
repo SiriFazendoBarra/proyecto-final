@@ -1,62 +1,71 @@
-.App{
+:root {
+    --color-primary: #1F4287;
+    --color-secondary: #278EA5;
+    --color-dark: #071E3D;
+    --color-light: #21E6C1;
+    --color-white: #eeeeee;
+    --color-black: #000000;
+}
+
+body {
+    color: var(--color-white);
+}
+
+.App {
     background-color: black;
     display: grid;
     row-gap: 10px;
     grid-template-areas: "navbar"
-                            "nav2"
-                            "view"
-                            "footer";
+        "nav2"
+        "view"
+        "footer";
 }
 
-.App>:nth-child(1){
+.App>:nth-child(1) {
     grid-area: navbar;
-}
-.App>:nth-child(2){
-    grid-area: nav2;
-}
-.App>:nth-child(3){
-    grid-area: view;
-}
-.App>:nth-child(4){
-    grid-area: footer;
+    height: 90px;
+    background-color: var(--color-dark);
 }
 
-h1{
+.App>:nth-child(2) {
+    grid-area: nav2;
+    height: 40px;
+    background-color: var(--color-black);
+}
+
+.App>:nth-child(3) {
+    grid-area: view;
+    min-height: calc(100vh - 200px);
+    background-color: var(--color-dark);
+}
+
+.App>:nth-child(4) {
+    grid-area: footer;
+    height: 100px;
+    background-color: var(--color-dark);
+    padding: 8px 0px 8px 0px;
+}
+
+h1 {
     margin: 0;
 }
 
-.NavBar{
-    background-color:#071E3D;
-}
-.Nav2{
-    background-color: black;
+.divNav2 {
+    background-color: var(--color-dark);
 }
 
-.page{
-    color: white;
-    background-color: #071E3D;
-    min-height: calc(100vh - 156px);
-}
-.divNav2{
-    background-color: #071E3D;
-}
-
-footer{
-    /* height: 100px; */
-    background-color: #071E3D;
-    color: white;
-    padding: 8px 0px 8px 0px;
-}
-.InputGroup{
+.InputGroup {
     max-width: 500px;
 }
-.Nav{
+
+.Nav {
     max-height: 400px;
 }
-.logo{
+
+.logo {
     max-width: 70px;
 }
-.formLogin{
- width: 500px;
-}
 
+.formLogin {
+    width: 400px;
+}

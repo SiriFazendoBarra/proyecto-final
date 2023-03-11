@@ -12,7 +12,7 @@ export default function NavBar() {
         <div className='NavBar'>
             <Navbar variant="dark">
                 <Container className='d-flex justifycontent-between gap-1'>
-                    <NavLink className="navbar-brand" to="/"><img className='img-fluid logo' src="../../public/logo.jpg" alt="logo" /></NavLink>
+                    <NavLink className="navbar-brand" to="/"><img className='img-fluid logo' src="/logo.jpg" alt="logo" /></NavLink>
                     <InputGroup className="InputGroup">
                         <Form.Control
                             className='my-auto'
@@ -24,7 +24,7 @@ export default function NavBar() {
                     <Nav className="Nav ">
                         <NavLink className="nav-link my-auto" to="/login">Login</NavLink>
                         <NavLink className="nav-link my-auto" to="/register">Register</NavLink>
-                        <NavLink className="nav-link my-auto" to="/options">Options</NavLink>
+                        <NavLink className="nav-link my-auto d-none" to="/options">Options</NavLink>
                     </Nav>
                 </Container>
             </Navbar>

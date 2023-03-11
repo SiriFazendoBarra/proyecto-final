@@ -11,9 +11,8 @@ export default function Register() {
                     <input className='form-control' type="date" placeholder='birthday' />
                     <input className='form-control' type="password" placeholder='password' />
                     <input className='form-control' type="password" placeholder='confirm password' />
-                    <button className='btn btn-light'>Join</button>
-                </form>
-                <div className="d-flex flex-column justify-content-start">
+
+                    <div className="d-flex flex-column justify-content-start">
                     <div className="d-flex gap-1">
                         <input className="form-check-input" type="checkbox" name="" id="" />
                         <p className="my-auto">I accept the terms and conditions of <a href="">Player 2</a> </p>
@@ -23,6 +22,9 @@ export default function Register() {
                         <p className="my-auto" >Add me to BusinessName's <a href="">newsletter</a> (Optional) </p>
                     </div>
                 </div>
+                    <button className='btn btn-light'>Join</button>
+                </form>
+                
 
 
             </div>
