@@ -24,7 +24,10 @@ export default function NavBar() {
                     <Nav className="Nav ">
                         <NavLink className="nav-link my-auto" to="/login">Login</NavLink>
                         <NavLink className="nav-link my-auto" to="/register">Register</NavLink>
-                        <NavLink className="nav-link my-auto d-none" to="/options">Options</NavLink>
+                        <NavLink className="nav-link my-auto" to="/cart">Cart</NavLink>
+                        <NavLink className="nav-link my-auto" to="/favorites">Favorites</NavLink>
+                        <NavLink className="nav-link my-auto" to="/options">Logout</NavLink>
+                        <NavLink className="nav-link my-auto" to="/options">Options</NavLink>
                     </Nav>
                 </Container>
             </Navbar>

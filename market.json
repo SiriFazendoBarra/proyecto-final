@@ -1,27 +1,63 @@
 {
-
-    "results":[
+    "results": [
         {
-            "id":"p001"
-        "title":"coso",
-        "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque blandit ligula, non venenatis turpis. Vivamus quam nibh, gravida sit.",
-        "price":"99"
-    },
+            "id": "p001",
+            "title": "Gameboy",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque blandit ligula, non venenatis turpis. Vivamus quam nibh, gravida sit.",
+            "price": "99",
+            "img":"./public/gameboy.jpg"
+        },
+        {
+            "id": "p002",
+            "title": "Nintendo 64",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque blandit ligula, non venenatis turpis. Vivamus quam nibh, gravida sit.",
+            "price": "99",
+            "img":"./public/nintendo64.jpg"
+        },
+        {
+            "id": "p003",
+            "title": "Control xbox s inalambrico blanco",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque blandit ligula, non venenatis turpis. Vivamus quam nibh, gravida sit.",
+            "price": "99",
+            "img":"Control-xbox-s inalambrico-blanco.jpg"
+        },
+        {
+            "id": "p004",
+            "title": "Super Mario catridge",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque blandit ligula, non venenatis turpis. Vivamus quam nibh, gravida sit.",
+            "price": "99",
+            "img":"supermariocatridge.jpg"
+        },
+        {
+            "id": "p005",
+            "title": "Super nintendo",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque blandit ligula, non venenatis turpis. Vivamus quam nibh, gravida sit.",
+            "price": "99",
+            "img":"supernintendo.jpg"
+        },
+        {
+            "id": "p006",
+            "title": "coso",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque blandit ligula, non venenatis turpis. Vivamus quam nibh, gravida sit.",
+            "price": "99"
+        },
+        {
+            "id": "p007",
+            "title": "coso",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque blandit ligula, non venenatis turpis. Vivamus quam nibh, gravida sit.",
+            "price": "99"
+        },
+        {
+            "id": "p008",
+            "title": "coso",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque blandit ligula, non venenatis turpis. Vivamus quam nibh, gravida sit.",
+            "price": "99"
+        },
+        {
+            "id": "p009",
+            "title": "coso",
+            "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque blandit ligula, non venenatis turpis. Vivamus quam nibh, gravida sit.",
+            "price": "99"
+        }
     ]
-
-
-
-    
-
-    "p002":{
-        "title":"coso",
-        "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque blandit ligula, non venenatis turpis. Vivamus quam nibh, gravida sit.",
-        "price":"99"
-    },
-
-    "p003":{
-        "title":"coso",
-        "desc":"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque blandit ligula, non venenatis turpis. Vivamus quam nibh, gravida sit.",
-        "price":"99"
-    }
 }

@@ -37,6 +37,7 @@ body {
     grid-area: view;
     min-height: calc(100vh - 200px);
     background-color: var(--color-dark);
+    
 }
 
 .App>:nth-child(4) {
@@ -44,6 +45,28 @@ body {
     height: 100px;
     background-color: var(--color-dark);
     padding: 8px 0px 8px 0px;
+}
+.marketSection{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 19rem), 1fr));
+    gap: 1rem;
+}
+
+.card{
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.CardImg{
+    height: 250px;
+    zoom: 1.1;
+    object-fit: cover;
+}
+
+.card-text{
+    height: 100px;
+    object-fit: cover;
+    overflow: hidden;
 }
 
 h1 {
