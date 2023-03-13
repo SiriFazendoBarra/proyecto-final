@@ -1,35 +1,27 @@
 import { useNavigate } from 'react-router-dom';
 
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
 
-export default function Cards({ item, params }) {
+import { useFavoritesContext } from '../context/FavoritesContext';
 
+export default function Cards({ item }) {
+  const { addFavorites } = useFavoritesContext()
   const navigate = useNavigate()
 
-
   const handleHome = () => {
-    if (params.id == null) {
-      navigate(`home/${item.id}`)
-      console.log(1)
-    } else {
-      console.log(2)
-      navigate(`/${item.id}`)
-    }
+
+    navigate(`home/${item.id}`)
   }
-  
 
   return (
-    <Card className='m-auto w-100 bg-dark' onClick={handleHome}>
-      <Card.Img className='CardImg' variant="top" src={item.img} />
+    <Card className='m-auto w-100 bg-dark' role="button">
+      <Card.Img className='CardImg cursor-pointer' variant="top" onClick={handleHome} src={item.img} />
       <Card.Body className='d-flex flex-column'>
         <Card.Title className=' h6'>{item.title}</Card.Title>
-        <div className='d-flex justify-content-between'>
-          <h4>${item.price}</h4>
-          <Button variant="light">Buy</Button>
+        <div className='d-flex justify-content-between align-items-center'>
+          <p className='h3 m-0 z-2' role="button" onClick={addFavorites(item)}>❤️</p>
+          <h4 className='m-0'>${item.price}</h4>
         </div>
-
-
       </Card.Body>
     </Card>
   )

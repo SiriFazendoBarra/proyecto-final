@@ -16,16 +16,18 @@ export default function Item() {
 
                 </section>
 
-                <div className="d-flex flex-wrap">
-                    <img className="img-fluid imgItem" src={item.img} alt="" />
-                    <div className="d-flex flex-column justify-content-between ms-3">
+                <div className="itemCard">
+                    <div className="">
+                       <img className="img-fluid imgItem" src={item.img} alt="" /> 
+                    </div>
+                    <div className="d-flex flex-column justify-content-between">
                         <div>
                             <h3>{item.title}</h3>
-                            <p className="">{item.desc}</p>
+                            <p className="text-align-justify">{item.desc}</p>
                         </div>
 
                         <div className="d-flex justify-content-between">
-                            <p className="h3">{item.price}</p>
+                            <p className="h3">${item.price}</p>
                             <button className="btn btn-light">Add to cart</button>
                         </div>
 

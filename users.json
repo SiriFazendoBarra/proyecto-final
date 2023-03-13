@@ -1,0 +1,26 @@
+{
+    "users": [
+        {
+            "id": "u001",
+            "username": "Messi",
+            "password": "10",
+            "email": "messi@email.com",
+            "name": "Lionel Messi",
+            "birthdate": "",
+            "favorites": "",
+            "publications":""
+        },
+
+        {
+            "id": "u002",
+            "username": "Ronaldo",
+            "password": "7",
+            "email": "cristiano@email.com",
+            "name": "Cristiano Ronaldo",
+            "birthdate": "",
+            "favorites": "",
+            "publications":""
+        }
+        
+    ]
+}

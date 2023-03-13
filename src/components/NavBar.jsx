@@ -4,9 +4,19 @@ import Navbar from 'react-bootstrap/Navbar';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button'
 import InputGroup from 'react-bootstrap/InputGroup';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
+import { useLoginContext } from '../context/LoginContext';
 
 export default function NavBar() {
+
+    const {login, setLogin} = useLoginContext()
+    const navigate = useNavigate()
+
+    const handleLogout = ()=>{
+        setLogin(false)
+        
+    }
+
 
     return (
         <div className='NavBar'>
@@ -22,13 +32,16 @@ export default function NavBar() {
                         <Button className='my-auto' variant="outline-secondary" id="button-addon2">Search</Button>
                     </InputGroup>
                     <Nav className="Nav ">
-                        <NavLink className="nav-link my-auto" to="/login">Login</NavLink>
-                        <NavLink className="nav-link my-auto" to="/register">Register</NavLink>
-                        <NavLink className="nav-link my-auto" to="/cart">Cart</NavLink>
-                        <NavLink className="nav-link my-auto" to="/myPublications">My Publications</NavLink>
-                        <NavLink className="nav-link my-auto" to="/favorites">Favorites</NavLink>
-                        <NavLink className="nav-link my-auto" to="/options">Logout</NavLink>
-                        <NavLink className="nav-link my-auto" to="/options">Options</NavLink>
+                        
+                        
+                        {!login ? <NavLink className="nav-link my-auto" to="/login">Login</NavLink> : null}
+                        {!login ? <NavLink className="nav-link my-auto" to="/register">Register</NavLink> : null}
+                        {login ? <NavLink className="nav-link my-auto" to="/cart">Cart</NavLink> : null}
+                        {login ? <NavLink className="nav-link my-auto" to="/myPublications">My Publications</NavLink> : null}
+                        {login ? <NavLink className="nav-link my-auto" to="/favorites">Favorites</NavLink> : null}
+                        {login ? <NavLink className="nav-link my-auto" onClick={handleLogout}>Logout</NavLink> : null}
+                        {login ? <NavLink className="nav-link my-auto" to="/options">Options</NavLink> : null}
+                        
                     </Nav>
                 </Container>
             </Navbar>

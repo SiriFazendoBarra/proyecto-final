@@ -1,11 +1,14 @@
 import { useNavigate } from "react-router-dom"
+import { useLoginContext } from "../context/LoginContext"
 
 export default function Login() {
 
+    const {setLogin} = useLoginContext()
     const navigate = useNavigate()
     
     const handleLogin = (e)=> {
         e.preventDefault()
+        setLogin(true)
         navigate("/profile")
     }
 
