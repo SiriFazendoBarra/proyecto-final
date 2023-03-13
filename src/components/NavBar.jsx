@@ -9,11 +9,11 @@ import { useLoginContext } from '../context/LoginContext';
 
 export default function NavBar() {
 
-    const {login, setLogin} = useLoginContext()
+    const {logged, setLogged} = useLoginContext()
     const navigate = useNavigate()
 
     const handleLogout = ()=>{
-        setLogin(false)
+        setLogged(false)
         
     }
 
@@ -34,13 +34,13 @@ export default function NavBar() {
                     <Nav className="Nav ">
                         
                         
-                        {!login ? <NavLink className="nav-link my-auto" to="/login">Login</NavLink> : null}
-                        {!login ? <NavLink className="nav-link my-auto" to="/register">Register</NavLink> : null}
-                        {login ? <NavLink className="nav-link my-auto" to="/cart">Cart</NavLink> : null}
-                        {login ? <NavLink className="nav-link my-auto" to="/myPublications">My Publications</NavLink> : null}
-                        {login ? <NavLink className="nav-link my-auto" to="/favorites">Favorites</NavLink> : null}
-                        {login ? <NavLink className="nav-link my-auto" onClick={handleLogout}>Logout</NavLink> : null}
-                        {login ? <NavLink className="nav-link my-auto" to="/options">Options</NavLink> : null}
+                        {!logged ? <NavLink className="nav-link my-auto" to="/login">Login</NavLink> : null}
+                        {!logged ? <NavLink className="nav-link my-auto" to="/register">Register</NavLink> : null}
+                        {logged ? <NavLink className="nav-link my-auto" to="/cart">Cart</NavLink> : null}
+                        {logged ? <NavLink className="nav-link my-auto" to="/myPublications">My Publications</NavLink> : null}
+                        {logged ? <NavLink className="nav-link my-auto" to="/profile/favorites">Favorites</NavLink> : null}
+                        {logged ? <NavLink className="nav-link my-auto" onClick={handleLogout}>Logout</NavLink> : null}
+                        {logged ? <NavLink className="nav-link my-auto" to="/options">Options</NavLink> : null}
                         
                     </Nav>
                 </Container>

@@ -12,16 +12,17 @@ import './assets/styles/css/index.css'
 ReactDOM.createRoot(document.getElementById('root')).render(
   // <React.StrictMode>
 
+  <BrowserRouter>
   <DataProvider>
     <LoginProvider>
       <FavoritesProvider>
-        <BrowserRouter>
+        
           <App />
-        </BrowserRouter>
+        
       </FavoritesProvider>
     </LoginProvider>
   </DataProvider>
-
+</BrowserRouter>
 
   // </React.StrictMode>,
 )

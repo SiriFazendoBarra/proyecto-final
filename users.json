@@ -6,6 +6,7 @@
             "password": "10",
             "email": "messi@email.com",
             "name": "Lionel Messi",
+            "address": "",
             "birthdate": "",
             "favorites": "",
             "publications":""
@@ -17,6 +18,7 @@
             "password": "7",
             "email": "cristiano@email.com",
             "name": "Cristiano Ronaldo",
+            "address": "",
             "birthdate": "",
             "favorites": "",
             "publications":""

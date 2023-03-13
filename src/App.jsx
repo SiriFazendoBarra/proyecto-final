@@ -14,6 +14,7 @@ import UserPublications from './views/UserPublications'
 import AddNew from './views/AddNew'
 import Cart from './views/Cart'
 import Item from './views/Item'
+import Favorites from './views/Favorites'
 
 function App() {
 
@@ -27,6 +28,7 @@ function App() {
         <Route path='/register' element={<Register />} />
         <Route path='/login' element={<Login />} />
         <Route path='/profile' element={<Profile />} />
+        <Route path='/profile/favorites' element={<Favorites />} />
         <Route path='/cart' element={<Cart />} />
         <Route path='/home/:id' element={<Item />} />
         <Route path='/myPublications' element={<UserPublications />} />

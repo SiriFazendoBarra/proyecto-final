@@ -19,7 +19,7 @@ export default function Cards({ item }) {
       <Card.Body className='d-flex flex-column'>
         <Card.Title className=' h6'>{item.title}</Card.Title>
         <div className='d-flex justify-content-between align-items-center'>
-          <p className='h3 m-0 z-2' role="button" onClick={addFavorites(item)}>❤️</p>
+          <p className='h3 m-0 z-2' role="button" onClick={()=> addFavorites(item)}>❤️</p>
           <h4 className='m-0'>${item.price}</h4>
         </div>
       </Card.Body>

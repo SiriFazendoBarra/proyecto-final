@@ -1,15 +1,18 @@
-import { useNavigate } from "react-router-dom"
+
+import { useState } from "react"
 import { useLoginContext } from "../context/LoginContext"
 
 export default function Login() {
 
-    const {setLogin} = useLoginContext()
-    const navigate = useNavigate()
-    
+    const [email, setEmail] = useState("messi@email.com")
+    const [password, setPassword] = useState("10")
+
+    const {getUser} = useLoginContext()
+          
     const handleLogin = (e)=> {
         e.preventDefault()
-        setLogin(true)
-        navigate("/profile")
+        getUser(email, password)
+             
     }
 
     return (
@@ -18,8 +21,8 @@ export default function Login() {
                 <h2>Welcome!</h2>
                 <h3>we've awaiting for you!</h3>
                 <form className="d-flex flex-column align-items-center gap-2 my-4 formLogin" action="" onSubmit={handleLogin}>
-                    <input className='form-control' type="text" placeholder='your@email.com' />
-                    <input className='form-control' type="text" placeholder='your password' />
+                    <input className='form-control' type="text" placeholder='your@email.com' onChange={(e)=> setEmail(e.target.value)} />
+                    <input className='form-control' type="text" placeholder='your password' onChange={(e)=> setPassword(e.target.value)}/>
                     <button className='btn btn-light' type="submit" >Login</button>
                 </form>
                 <p className="m-auto">Forgot your password?, <a href="">click here</a> </p>
