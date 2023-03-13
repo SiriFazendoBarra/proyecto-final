@@ -6,19 +6,17 @@ import Card from 'react-bootstrap/Card';
 export default function Cards({ item, params }) {
 
   const navigate = useNavigate()
-  
-  
-  const handleHome = ()=> {
+
+
+  const handleHome = () => {
     if (params.id == null) {
       navigate(`home/${item.id}`)
       console.log(1)
-    }else{
+    } else {
       console.log(2)
       navigate(`/${item.id}`)
     }
   }
-console.log(params.id)
-  // params = 'undefined' ? params="home" : null
   
 
   return (

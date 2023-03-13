@@ -92,3 +92,9 @@ h1 {
 .formLogin {
     width: 400px;
 }
+
+.imgItem{
+    max-width: 500px;
+    zoom: 1.1;
+    object-fit: cover;
+}

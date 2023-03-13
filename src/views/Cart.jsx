@@ -5,8 +5,6 @@ import Cards from "../components/Cards"
 export default function Cart() {
 
     const { market } = useDataContext()
-    console.log(market)
-
     return (
         <div className="page">
             <div className="container py-5">

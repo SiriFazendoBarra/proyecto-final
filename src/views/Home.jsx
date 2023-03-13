@@ -11,6 +11,9 @@ export default function Home() {
     return (
         <div className="page">
             <div className="container py-5">
+                <section>
+                    <h1 className="mb-5">Welcome to Player 2</h1>
+                </section>
                 <section className="marketSection">
                     {
                         market.map((item) => {
