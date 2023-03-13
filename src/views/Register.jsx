@@ -14,11 +14,11 @@ export default function Register() {
 
                     <div className="d-flex flex-column justify-content-start">
                     <div className="d-flex gap-1">
-                        <input className="form-check-input" type="checkbox" name="" id="" />
+                        <input className="form-check-input" type="checkbox"/>
                         <p className="my-auto">I accept the terms and conditions of <a href="">Player 2</a> </p>
                     </div>
                     <div className="d-flex gap-1">
-                        <input className="form-check-input" type="checkbox" name="" id="" />
+                        <input className="form-check-input" type="checkbox"/>
                         <p className="my-auto" >Add me to BusinessName's <a href="">newsletter</a> (Optional) </p>
                     </div>
                 </div>

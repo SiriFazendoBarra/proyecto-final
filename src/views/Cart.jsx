@@ -1,21 +1,23 @@
 import { useDataContext } from "../context/DataContext"
-import { useParams } from "react-router-dom"
 
 import Cards from "../components/Cards"
 
-export default function Home() {
+export default function Cart() {
 
     const { market } = useDataContext()
-    const params = useParams()
-        
+    console.log(market)
+
     return (
         <div className="page">
             <div className="container py-5">
+                <section className="d-flex justify-content-between mb-5">
+                    <h2>Cart</h2>
+                </section>
                 <section className="marketSection">
                     {
                         market.map((item) => {
                             return (
-                                <Cards key={item.id} item={item} params={params} />
+                                <Cards key={item.id} item={item} />
                             )
                         })
                     }

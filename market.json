@@ -5,35 +5,35 @@
             "title": "Gameboy",
             "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque blandit ligula, non venenatis turpis. Vivamus quam nibh, gravida sit.",
             "price": "99",
-            "img":"./public/gameboy.jpg"
+            "img":"/gameboy.jpg"
         },
         {
             "id": "p002",
             "title": "Nintendo 64",
             "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque blandit ligula, non venenatis turpis. Vivamus quam nibh, gravida sit.",
             "price": "99",
-            "img":"./public/nintendo64.jpg"
+            "img":"/nintendo64.jpg"
         },
         {
             "id": "p003",
             "title": "Control xbox s inalambrico blanco",
             "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque blandit ligula, non venenatis turpis. Vivamus quam nibh, gravida sit.",
             "price": "99",
-            "img":"Control-xbox-s inalambrico-blanco.jpg"
+            "img":"/Control-xbox-s inalambrico-blanco.jpg"
         },
         {
             "id": "p004",
             "title": "Super Mario catridge",
             "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque blandit ligula, non venenatis turpis. Vivamus quam nibh, gravida sit.",
             "price": "99",
-            "img":"supermariocatridge.jpg"
+            "img":"/supermariocatridge.jpg"
         },
         {
             "id": "p005",
             "title": "Super nintendo",
             "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque blandit ligula, non venenatis turpis. Vivamus quam nibh, gravida sit.",
             "price": "99",
-            "img":"supernintendo.jpg"
+            "img":"/supernintendo.jpg"
         },
         {
             "id": "p006",
