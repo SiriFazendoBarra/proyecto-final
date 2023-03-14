@@ -8,7 +8,15 @@
             "name": "Lionel Messi",
             "address": "",
             "birthdate": "",
-            "favorites": "",
+            "favorites": [
+                {
+                    "id": "p003",
+                    "title": "Control xbox s inalambrico blanco",
+                    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque blandit ligula, non venenatis turpis. Vivamus quam nibh, gravida sit.",
+                    "price": "99",
+                    "img":"/Control-xbox-s inalambrico-blanco.jpg"
+                }
+            ],
             "publications":""
         },
 

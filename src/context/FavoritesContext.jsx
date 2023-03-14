@@ -5,16 +5,17 @@ const FavoritesContext = createContext()
 
 export default function FavoritesProvider({ children }) {
 
-    const [favorites, setFavorites] = useState([])
-    const { logged } = useLoginContext()
-
+    
+    const { user, logged } = useLoginContext()
+    const [favorites, setFavorites] = useState(null)
 
     const addFavorites = (item) => {
-
+        
         if (logged == true) {
-            setFavorites([...favorites, item])
+            user.favorites ? setFavorites(user.favorites) : null
+            favorites ? setFavorites([...favorites, item] ) : null           
         }
-
+        console.log(favorites)
     }
 
     return (

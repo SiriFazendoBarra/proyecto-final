@@ -14,6 +14,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 
   <BrowserRouter>
   <DataProvider>
+
     <LoginProvider>
       <FavoritesProvider>
         
@@ -21,6 +22,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
         
       </FavoritesProvider>
     </LoginProvider>
+    
   </DataProvider>
 </BrowserRouter>
 

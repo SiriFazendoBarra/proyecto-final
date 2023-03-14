@@ -6,22 +6,30 @@ const LoginContext = createContext()
 export default function LoginProvider({ children }) {
 
     const navigate = useNavigate()
-    const [logged, setLogged] = useState(null)
-    const [user, setUser] = useState(null)
+    const [email, setEmail] = useState(null)
+    const [password, setPassword] = useState(null)
+    const [logged, setLogged] = useState(false)
+    const [user, setUser] = useState({})
 
-    const getUser = async (email, password) => {
+    const getUser = async () => {
         const res = await fetch("../users.json")
         const data = await res.json()
         const users = data.users
         for (const item of users) {
             
             if (item.email == email) {
-                if (item.password == password)
+                if (item.password == password){
                     setLogged(true)
                     setUser(item)
+                    console.log(user)
+                }
+                    
+                return logged ? navigate("/home") : null   
+
             }
         }
-        return logged ? navigate("/home") : null 
+        
+         
     }
 
     useEffect(() => {
@@ -31,7 +39,7 @@ export default function LoginProvider({ children }) {
 
 
     return (
-        <LoginContext.Provider value={{ logged, setLogged, getUser, user }}>
+        <LoginContext.Provider value={{ logged, setLogged, getUser, user, email, setEmail, password, setPassword }}>
             {children}
         </LoginContext.Provider>
     )

@@ -10,8 +10,7 @@ import { useLoginContext } from '../context/LoginContext';
 export default function NavBar() {
 
     const {logged, setLogged} = useLoginContext()
-    const navigate = useNavigate()
-
+    
     const handleLogout = ()=>{
         setLogged(false)
         
