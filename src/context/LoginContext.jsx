@@ -6,8 +6,8 @@ const LoginContext = createContext()
 export default function LoginProvider({ children }) {
 
     const navigate = useNavigate()
-    const [email, setEmail] = useState(null)
-    const [password, setPassword] = useState(null)
+    const [email, setEmail] = useState("messi@email.com")
+    const [password, setPassword] = useState("10")
     const [logged, setLogged] = useState(false)
     const [user, setUser] = useState({})
 
@@ -21,7 +21,6 @@ export default function LoginProvider({ children }) {
                 if (item.password == password){
                     setLogged(true)
                     setUser(item)
-                    console.log(user)
                     return navigate("/home")
                 } 
             }

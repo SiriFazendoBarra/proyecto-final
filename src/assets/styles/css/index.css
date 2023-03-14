@@ -104,4 +104,14 @@ h1 {
   object-fit: contain;
 }
 
+.cart-list-item .tr-img {
+  width: 100px;
+}
+.cart-list-item img {
+  zoom: 1;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
 /*# sourceMappingURL=index.css.map */

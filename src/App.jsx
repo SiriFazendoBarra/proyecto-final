@@ -19,7 +19,7 @@ import { useLoginContext } from './context/LoginContext'
 
 function App() {
 
-  const {user} = useLoginContext()
+  const { user } = useLoginContext()
 
   return (
     <div className="App">
@@ -30,12 +30,12 @@ function App() {
         <Route path='/home' element={<Home />} />
         <Route path='/register' element={<Register />} />
         <Route path='/login' element={<Login />} />
-        <Route path={ `/${user.name}`} element={<Profile />} />
-        <Route path={`/${user.name}/favorites`} element={<Favorites />} />
-        <Route path='/cart' element={<Cart />} />
         <Route path='/home/:id' element={<Item />} />
-        <Route path='/myPublications' element={<UserPublications />} />
-        <Route path='/addNew' element={<AddNew />} />
+        <Route path={`/${user.name}`} element={<Profile />} />
+        <Route path={`/${user.name}/favorites`} element={<Favorites />} />
+        <Route path={`/${user.name}/cart`} element={<Cart />} />
+        <Route path={`/${user.name}/publications`} element={<UserPublications />} />
+        <Route path={`/${user.name}/publications/addnew`} element={<AddNew />} />
         <Route path='/*' element={<Error404 />} />
       </Routes>
       <Footer />
