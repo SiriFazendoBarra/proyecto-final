@@ -9,14 +9,16 @@ import { useLoginContext } from '../context/LoginContext';
 
 export default function NavBar() {
 
-    const {logged, setLogged} = useLoginContext()
+    const {logged, setLogged, setPassword, setEmail, user} = useLoginContext()
+    const navigate = useNavigate()
     
     const handleLogout = ()=>{
+        console.log(navigate)
         setLogged(false)
+        setPassword(null)
+        setEmail(null)
         
     }
-
-
     return (
         <div className='NavBar'>
             <Navbar variant="dark">
@@ -37,8 +39,8 @@ export default function NavBar() {
                         {!logged ? <NavLink className="nav-link my-auto" to="/register">Register</NavLink> : null}
                         {logged ? <NavLink className="nav-link my-auto" to="/cart">Cart</NavLink> : null}
                         {logged ? <NavLink className="nav-link my-auto" to="/myPublications">My Publications</NavLink> : null}
-                        {logged ? <NavLink className="nav-link my-auto" to="/profile/favorites">Favorites</NavLink> : null}
-                        {logged ? <NavLink className="nav-link my-auto" onClick={handleLogout}>Logout</NavLink> : null}
+                        {logged ? <NavLink className="nav-link my-auto" to={`/${user.name}/favorites`}>Favorites</NavLink> : null}
+                        {logged ? <NavLink className="nav-link my-auto" to="/login" onClick={handleLogout}>Logout</NavLink> : null}
                         {logged ? <NavLink className="nav-link my-auto" to="/options">Options</NavLink> : null}
                         
                     </Nav>

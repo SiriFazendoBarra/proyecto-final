@@ -22,10 +22,8 @@ export default function LoginProvider({ children }) {
                     setLogged(true)
                     setUser(item)
                     console.log(user)
-                }
-                    
-                return logged ? navigate("/home") : null   
-
+                    return navigate("/home")
+                } 
             }
         }
         

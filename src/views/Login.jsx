@@ -1,17 +1,12 @@
 
-import { useState } from "react"
 import { useLoginContext } from "../context/LoginContext"
 
 export default function Login() {
-
-    // const [email, setEmail] = useState("messi@email.com")
-    // const [password, setPassword] = useState("10")
 
     const {getUser, setEmail, setPassword} = useLoginContext()
           
     const handleLogin = (e)=> {
         e.preventDefault()
-        // getUser(email, password)
         getUser()
              
     }
