@@ -16,7 +16,7 @@ export default function Cards({ item }) {
   return (
     <Card className='m-auto w-100 bg-dark' role="button">
       <Card.Img className='CardImg cursor-pointer' variant="top" onClick={handleHome} src={item.img} />
-      <Card.Body className='d-flex flex-column'>
+      <Card.Body className='d-flex flex-column justify-content-between'>
         <Card.Title className=' h6'>{item.title}</Card.Title>
         <div className='d-flex justify-content-between align-items-center'>
           <p className='h3 m-0 z-2' role="button" onClick={()=> addFavorites(item)}>❤️</p>

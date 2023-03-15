@@ -50,7 +50,7 @@ body {
 
 .marketSection {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 19rem), 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 12rem), 1fr));
     gap: 1rem;
 }
 
@@ -64,9 +64,13 @@ body {
     }
 
     .CardImg {
-        height: 250px;
+        height: 200px;
         zoom: 1.1;
         object-fit: cover;
+    }
+
+    .card-body {
+        min-height: 150px;
     }
 
     .card-text {
@@ -97,8 +101,8 @@ h1 {
     max-width: 70px;
 }
 
-.formLogin {
-    width: 400px;
+.login-form {
+    max-width: 40rem;
 }
 
 .itemCard {
