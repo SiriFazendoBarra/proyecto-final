@@ -21,7 +21,6 @@ body {
 
 .App > :nth-child(1) {
   grid-area: navbar;
-  height: 90px;
   background-color: var(--color-dark);
 }
 
@@ -39,9 +38,8 @@ body {
 
 .App > :nth-child(4) {
   grid-area: footer;
-  height: 100px;
   background-color: var(--color-dark);
-  padding: 8px 0px 8px 0px;
+  padding: 1rem 0px 1rem 0px;
 }
 
 .marketSection {
@@ -86,6 +84,7 @@ h1 {
 
 .Nav {
   max-height: 400px;
+  font-size: 1.5rem;
 }
 
 .logo {
@@ -101,8 +100,7 @@ h1 {
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
   gap: 1rem;
 }
-.itemCard div .imgItem {
-  width: 100%;
+.itemCard div .img-item {
   zoom: 2;
   object-fit: contain;
 }
@@ -115,6 +113,21 @@ h1 {
   width: 100px;
   height: 100px;
   object-fit: cover;
+}
+
+.ico-email {
+  font-size: 3rem;
+}
+
+.social-ico-div > p {
+  font-size: 2rem;
+}
+
+.about-page div {
+  max-width: 800px;
+}
+.about-page div .about-img-div {
+  max-width: 500px;
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -6,6 +6,8 @@ const FavoritesContext = createContext()
 
 export default function FavoritesProvider({ children }) {
 
+    // if (favorites.some(item => item == itemId)) setFavorites(favorites.filter(item => item != itemid))
+    // else setFavorites([...favorites, itemId])
 
     const { user, logged } = useLoginContext()
     const [favorites, setFavorites] = useState([])

@@ -1,3 +1,4 @@
+import { FaRegHeart, FaHeart } from "react-icons/fa"
 import { useNavigate } from 'react-router-dom';
 
 import Card from 'react-bootstrap/Card';
@@ -19,9 +20,10 @@ export default function Cards({ item }) {
       <Card.Body className='d-flex flex-column justify-content-between'>
         <Card.Title className=' h6'>{item.title}</Card.Title>
         <div className='d-flex justify-content-between align-items-center'>
-          <p className='h3 m-0 z-2' role="button" onClick={()=> addFavorites(item)}>❤️</p>
+          <p className='h3 m-0 z-2' role="button" onClick={() => addFavorites(item)}>❤️</p>
           <h4 className='m-0'>${item.price}</h4>
         </div>
+
       </Card.Body>
     </Card>
   )

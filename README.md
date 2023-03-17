@@ -4,6 +4,7 @@ depedencias:
 
 bootstrap
 sass
+font-awesome
 react-bootstrap
 react-router-dom
 
