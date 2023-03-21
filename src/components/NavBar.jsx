@@ -10,12 +10,19 @@ import { ImExit, ImUser, ImUserPlus } from 'react-icons/im'
 // import { HiUserPlus, HiUser } from 'react-icons/hi'
 
 
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 import { useLoginContext } from '../context/LoginContext';
+import { useCartContext } from '../context/CartContext';
+import { useSearchContext } from '../context/SearchContext';
+import { useState } from 'react';
 
 export default function NavBar() {
 
     const { logged, setLogged, setPassword, setEmail, user } = useLoginContext()
+    const { cart, cartAmount } = useCartContext()
+    const { setSearchBar, setCategories } = useSearchContext()
+    const [inputBar, setInputBar] = useState("")
+    const navigate = useNavigate()
 
     const handleLogout = () => {
 
@@ -24,24 +31,54 @@ export default function NavBar() {
         setEmail(null)
 
     }
+
+    const handleSearchClick = (e, inputBar) => {
+        e.preventDefault()
+        setSearchBar(inputBar)
+    }
+
+    const handleLogoClick = () => {
+        setSearchBar("")
+        setCategories("")
+        navigate("../")
+
+    }
     return (
         <div className='NavBar'>
             <Navbar variant="dark">
                 <Container className='d-flex justifycontent-between gap-3 gap-md-0 flex-wrap'>
-                    <NavLink className="navbar-brand" to="/"><img className='img-fluid logo' src="/logo.jpg" alt="logo" /></NavLink>
-                    <InputGroup className="InputGroup">
-                        <Form.Control
-                            className='my-auto'
-                            placeholder="Do you want to search something?"
-                            aria-describedby="basic-addon2"
-                        />
-                        <Button className='my-auto' variant="outline-secondary" id="button-addon2">Search</Button>
-                    </InputGroup>
-                    <Nav className="Nav ">
-                        {!logged ? <NavLink className="nav-link my-auto" to="/login"><ImUser /> </NavLink> : null}
+                    {/* <NavLink className="navbar-brand animation-zoom" to="/"><img className='img-fluid logo' src="/logo.jpg" alt="logo" /></NavLink> */}
+                    <img className='img-fluid logo animation-zoom-card' role='button' src="/logo.jpg" alt="logo" onClick={() => handleLogoClick()} />
+                    <form className='d-flex col-4 animation-zoom-card' action="" onSubmit={(e) => handleSearchClick(e, inputBar)}>
+                        <div className='input-group'>
+                            <input
+                                className='my-auto form-control'
+                                placeholder="Do you want to search something?"
+                                aria-describedby="basic-addon2"
+                                onChange={(e) => setInputBar(e.target.value)}
+                            />
+                            <Button className='my-auto' variant="outline-secondary" id="button-addon2" type='submit' >Search</Button>
+                        </div>
+
+                    </form>
+                    <p className='m-0 h5'>Hi, {user.name}</p>
+                    <Nav className="Nav  ">
+                        {!logged ? <NavLink className="my-auto animation-zoom" to="/login"><ImUser /> </NavLink> : null}
                         {!logged ? <NavLink className="nav-link my-auto" to="/register"><ImUserPlus /></NavLink> : null}
                         {logged ? <NavLink className="nav-link my-auto" to={`${user.name}`}><FaHouseUser /></NavLink> : null}
-                        {logged ? <NavLink className="nav-link my-auto" to={`${user.name}/cart`}><FaShoppingCart /></NavLink> : null}
+                        {logged ?
+                            <div >
+                                <NavLink className="nav-link my-auto position-relative" to={`${user.name}/cart`}>
+                                    <FaShoppingCart />
+                                    {cart.length > 0 ? <span className="cart-count position-absolute top-0 start-50 translate-middle badge border border-light rounded-circle bg-danger p-2">
+                                        {cartAmount}
+                                    </span>
+                                        : null}
+
+                                </NavLink>
+                            </div>
+                            :
+                            null}
                         {logged ? <NavLink className="nav-link my-auto" to={`/${user.name}/publications`}> <FaStore /></NavLink> : null}
                         {logged ? <NavLink className="nav-link my-auto" to={`/${user.name}/favorites`}><FaHeart /></NavLink> : null}
                         {logged ? <NavLink className="nav-link my-auto" to="/login" onClick={handleLogout}><ImExit /></NavLink> : null}

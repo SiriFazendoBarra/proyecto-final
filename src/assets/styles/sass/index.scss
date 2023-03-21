@@ -1,11 +1,4 @@
-:root {
-    --color-primary: #1F4287;
-    --color-secondary: #278EA5;
-    --color-dark: #071E3D;
-    --color-light: #21E6C1;
-    --color-white: #eeeeee;
-    --color-black: #000000;
-}
+@import "_variables.scss";
 
 body {
     color: var(--color-white);
@@ -48,6 +41,11 @@ body {
     padding: 1rem 0px 1rem 0px;
 }
 
+a {
+    color: var(--color-white);
+    text-decoration: none;
+}
+
 .marketSection {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 12rem), 1fr));
@@ -58,6 +56,7 @@ body {
     font-size: 16px;
     font-weight: 300;
     transition-duration: 0.3s;
+    background-color: var(--color-primary);
 
     &:hover {
         box-shadow: 0px 0px 8px 2px var(--color-light);
@@ -67,10 +66,12 @@ body {
         height: 200px;
         zoom: 1.1;
         object-fit: cover;
+        background-color: var(--color-white);
     }
 
     .card-body {
-        min-height: 150px;
+        min-height: 120px;
+        overflow: hidden;
     }
 
     .card-text {
@@ -87,6 +88,12 @@ h1 {
 
 .divNav2 {
     background-color: var(--color-dark);
+    transition-duration: 0.2s;
+
+    &:hover {
+        box-shadow: 0px 0px 4px 0.5px var(--color-light);
+        cursor: pointer;
+    }
 }
 
 .InputGroup {
@@ -110,18 +117,21 @@ h1 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
     gap: 1rem;
+    background-color: var(--color-primary);
 
     div {
+
         .img-item {
             zoom: 2;
-            object-fit: contain;
-
-
         }
     }
 }
 
 .cart-list-item {
+    background-color: var(--color-primary);
+    border-radius: 4px;
+
+
     .tr-img {
         width: 100px;
     }
@@ -153,4 +163,31 @@ h1 {
         }
 
     }
+}
+
+.animation-zoom {
+
+    transition-duration: 0.2s;
+
+    &:hover {
+        transform: scale(1.2);
+        // font-size: 1.2rem;
+        color: var(--color-light);
+        z-index: 1111;
+    }
+}
+
+.animation-zoom-card {
+
+    transition-duration: 0.2s;
+
+    &:hover {
+        transform: scale(1.05);
+        color: var(--color-light);
+        z-index: 1111;
+    }
+}
+
+.cart-count {
+    transform: scale(0.5) !important;
 }

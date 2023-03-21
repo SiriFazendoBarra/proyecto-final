@@ -14,7 +14,7 @@ export default function Emailus() {
                 <form className="d-flex flex-column align-items-center gap-2 my-4 formLogin" action="" onSubmit={() => handleSubmit()} >
                     <input className='form-control' type="text" placeholder='your@email.com' />
 
-                    <select class="form-select" id="floatingSelect" aria-label="Floating label select example">
+                    <select className="form-select" id="floatingSelect" aria-label="Floating label select example">
 
                         <option value="1">Choose an option</option>
                         <option value="1">Need to report a problem</option>
@@ -24,13 +24,13 @@ export default function Emailus() {
                         <option value="2">Congratulations</option>
                     </select>
 
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Write here..."></textarea>
+                    <textarea className="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Write here..."></textarea>
 
                     <button className='btn btn-light' type="submit" >Login</button>
                 </form>
 
             </div>
 
-        </div>
+        </div >
     )
 }

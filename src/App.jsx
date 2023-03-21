@@ -1,6 +1,9 @@
+
 import '../node_modules/bootstrap/dist/css/bootstrap.css'
+import './assets/styles/css/index.css'
 
 import { Route, Routes } from 'react-router-dom'
+import { useLoginContext } from './context/LoginContext'
 
 import NavBar from './components/NavBar'
 import Nav2 from './components/Nav2'
@@ -16,8 +19,6 @@ import Cart from './views/Cart'
 import Item from './views/Item'
 import Favorites from './views/Favorites'
 import About from './views/About'
-
-import { useLoginContext } from './context/LoginContext'
 import Emailus from './views/Emailus'
 import Terms from './views/Terms'
 
@@ -38,7 +39,7 @@ function App() {
         <Route path='/about' element={<About />} />
         <Route path='/terms' element={<Terms />} />
         <Route path='/emailus' element={<Emailus />} />
-        <Route path='/home/:id' element={<Item />} />
+        <Route path='/market/:id' element={<Item />} />
         <Route path={`/${user.name}`} element={<Profile />} />
         <Route path={`/${user.name}/favorites`} element={<Favorites />} />
         <Route path={`/${user.name}/cart`} element={<Cart />} />
