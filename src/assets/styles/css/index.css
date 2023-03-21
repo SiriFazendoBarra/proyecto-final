@@ -21,7 +21,6 @@ body {
 
 .App > :nth-child(1) {
   grid-area: navbar;
-  height: 90px;
   background-color: var(--color-dark);
 }
 
@@ -39,9 +38,13 @@ body {
 
 .App > :nth-child(4) {
   grid-area: footer;
-  height: 100px;
   background-color: var(--color-dark);
-  padding: 8px 0px 8px 0px;
+  padding: 1rem 0px 1rem 0px;
+}
+
+a {
+  color: var(--color-white);
+  text-decoration: none;
 }
 
 .marketSection {
@@ -54,6 +57,7 @@ body {
   font-size: 16px;
   font-weight: 300;
   transition-duration: 0.3s;
+  background-color: var(--color-primary);
 }
 .card:hover {
   box-shadow: 0px 0px 8px 2px var(--color-light);
@@ -62,9 +66,11 @@ body {
   height: 200px;
   zoom: 1.1;
   object-fit: cover;
+  background-color: var(--color-white);
 }
 .card .card-body {
-  min-height: 150px;
+  min-height: 120px;
+  overflow: hidden;
 }
 .card .card-text {
   height: 100px;
@@ -78,6 +84,11 @@ h1 {
 
 .divNav2 {
   background-color: var(--color-dark);
+  transition-duration: 0.2s;
+}
+.divNav2:hover {
+  box-shadow: 0px 0px 4px 0.5px var(--color-light);
+  cursor: pointer;
 }
 
 .InputGroup {
@@ -86,6 +97,7 @@ h1 {
 
 .Nav {
   max-height: 400px;
+  font-size: 1.5rem;
 }
 
 .logo {
@@ -100,13 +112,16 @@ h1 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
   gap: 1rem;
+  background-color: var(--color-primary);
 }
-.itemCard div .imgItem {
-  width: 100%;
+.itemCard div .img-item {
   zoom: 2;
-  object-fit: contain;
 }
 
+.cart-list-item {
+  background-color: var(--color-primary);
+  border-radius: 4px;
+}
 .cart-list-item .tr-img {
   width: 100px;
 }
@@ -115,6 +130,43 @@ h1 {
   width: 100px;
   height: 100px;
   object-fit: cover;
+}
+
+.ico-email {
+  font-size: 3rem;
+}
+
+.social-ico-div > p {
+  font-size: 2rem;
+}
+
+.about-page div {
+  max-width: 800px;
+}
+.about-page div .about-img-div {
+  max-width: 500px;
+}
+
+.animation-zoom {
+  transition-duration: 0.2s;
+}
+.animation-zoom:hover {
+  transform: scale(1.2);
+  color: var(--color-light);
+  z-index: 1111;
+}
+
+.animation-zoom-card {
+  transition-duration: 0.2s;
+}
+.animation-zoom-card:hover {
+  transform: scale(1.05);
+  color: var(--color-light);
+  z-index: 1111;
+}
+
+.cart-count {
+  transform: scale(0.5) !important;
 }
 
 /*# sourceMappingURL=index.css.map */

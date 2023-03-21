@@ -10,16 +10,11 @@
             "birthdate": "",
             "favorites": [
                 {
-                    "id": "p003",
-                    "title": "Control xbox s inalambrico blanco",
-                    "desc": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean scelerisque blandit ligula, non venenatis turpis. Vivamus quam nibh, gravida sit.",
-                    "price": "99",
-                    "img":"/Control-xbox-s inalambrico-blanco.jpg"
+                    "id": "p003"
                 }
             ],
-            "publications":[]
+            "publications": []
         },
-
         {
             "id": "u002",
             "username": "Ronaldo",
@@ -28,9 +23,8 @@
             "name": "Cristiano Ronaldo",
             "address": "",
             "birthdate": "",
-            "favorites": "",
-            "publications":""
+            "favorites": [],
+            "publications": ""
         }
-        
     ]
 }

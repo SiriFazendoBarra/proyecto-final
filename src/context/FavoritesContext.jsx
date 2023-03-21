@@ -1,37 +1,25 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useContext, useState } from "react";
+
 import { useLoginContext } from "./LoginContext";
 
 const FavoritesContext = createContext()
-// const initialStateFavorites = localStorage.getItem("favorites") ? JSON.parse(localStorage.getItem("favorites")) : [] ///Ojo ACA
 
 export default function FavoritesProvider({ children }) {
 
-
-    const { user, logged } = useLoginContext()
     const [favorites, setFavorites] = useState([])
+    const { logged, user } = useLoginContext()
 
-    // useEffect(() => {
-    //     localStorage.setItem("favorites", JSON.stringify(favorites))
-    // }, [favorites])
+    const handleFavorites = (id) => {
 
-    useEffect(() => {
         if (logged) {
-            user.favorites ? setFavorites([...user.favorites]) : null
+            if (favorites.some(item => item == id)) setFavorites(favorites.filter(item => item != id))
+            else setFavorites([...favorites, id])
         }
-    }, [logged])
 
-    const addFavorites = (item) => {
-
-        if (logged == true) {
-
-            favorites ? setFavorites([...favorites, item]) : null
-        }
-        console.log(favorites)
     }
-
     return (
 
-        <FavoritesContext.Provider value={{ favorites, setFavorites, addFavorites }}>
+        <FavoritesContext.Provider value={{ favorites, setFavorites, handleFavorites }}>
             {children}
         </FavoritesContext.Provider>
     )

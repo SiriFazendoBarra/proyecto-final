@@ -7,7 +7,8 @@ import CartProvider from './context/CartContext'
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App'
-import './assets/styles/css/index.css'
+import SearchProvider from './context/SearchContext'
+
 
 
 
@@ -16,17 +17,20 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   // <React.StrictMode>
 
   <BrowserRouter>
-    <DataProvider>
-      <LoginProvider>
-        <FavoritesProvider>
-          <PublicationsProvider>
-            <CartProvider>
-              <App />
-            </CartProvider>
-          </PublicationsProvider>
-        </FavoritesProvider>
-      </LoginProvider>
-    </DataProvider>
+
+    <SearchProvider>
+      <DataProvider>
+        <LoginProvider>
+          <FavoritesProvider>
+            <PublicationsProvider>
+              <CartProvider>
+                <App />
+              </CartProvider>
+            </PublicationsProvider>
+          </FavoritesProvider>
+        </LoginProvider>
+      </DataProvider>
+    </SearchProvider>
   </BrowserRouter>
 
   // </React.StrictMode>,
