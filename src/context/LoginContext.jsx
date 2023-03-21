@@ -6,8 +6,8 @@ const LoginContext = createContext()
 export default function LoginProvider({ children }) {
 
     const navigate = useNavigate()
-    const [email, setEmail] = useState("messi@email.com")
-    const [password, setPassword] = useState("10")
+    const [email, setEmail] = useState("")
+    const [password, setPassword] = useState("")
     const [logged, setLogged] = useState(false)
     const [user, setUser] = useState({})
 
@@ -16,17 +16,17 @@ export default function LoginProvider({ children }) {
         const data = await res.json()
         const users = data.users
         for (const item of users) {
-            
+
             if (item.email == email) {
-                if (item.password == password){
+                if (item.password == password) {
                     setLogged(true)
                     setUser(item)
                     return navigate("/home")
-                } 
+                }
             }
         }
-        
-         
+
+
     }
 
     useEffect(() => {

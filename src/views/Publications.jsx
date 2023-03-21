@@ -15,14 +15,14 @@ export default function Publications() {
                 <section className="d-flex justify-content-between mb-5">
                     <div>
                         <h2>Your Publications</h2>
-                        {publications ? <h3>Gotta catch for moar!</h3> : <h3>Ups! it seems very very empty right here</h3>}
+                        {publications.length > 0 ? <h3>Gotta catch for moar!</h3> : <h3>Ups! it seems very very empty right here</h3>}
                     </div>
                     <button className="btn btn-light my-auto" onClick={() => navigate(`/${user.name}/publications/addnew`)}   >Add new</button>
 
                 </section>
                 <section className="marketSection">
                     {
-                        !publications ? null :
+                        publications.length > 0 ? null :
                             publications.map((item) => {
                                 return (
                                     <Cards key={item.id} item={item} />

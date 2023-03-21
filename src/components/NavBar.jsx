@@ -27,8 +27,9 @@ export default function NavBar() {
     const handleLogout = () => {
 
         setLogged(false)
-        setPassword(null)
-        setEmail(null)
+        setPassword("")
+        setEmail("")
+        setUser({})
 
     }
 
@@ -40,15 +41,14 @@ export default function NavBar() {
     const handleLogoClick = () => {
         setSearchBar("")
         setCategories("")
-        navigate("../")
+
 
     }
     return (
         <div className='NavBar'>
             <Navbar variant="dark">
                 <Container className='d-flex justifycontent-between gap-3 gap-md-0 flex-wrap'>
-                    {/* <NavLink className="navbar-brand animation-zoom" to="/"><img className='img-fluid logo' src="/logo.jpg" alt="logo" /></NavLink> */}
-                    <img className='img-fluid logo animation-zoom-card' role='button' src="/logo.jpg" alt="logo" onClick={() => handleLogoClick()} />
+                    <NavLink className="navbar-brand animation-zoom" to="/" onClick={() => handleLogoClick()}><img className='img-fluid logo' src="/logo.jpg" alt="logo" /></NavLink>
                     <form className='d-flex col-4 animation-zoom-card' action="" onSubmit={(e) => handleSearchClick(e, inputBar)}>
                         <div className='input-group'>
                             <input

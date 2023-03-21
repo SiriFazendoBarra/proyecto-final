@@ -4,7 +4,7 @@ const DataContext = createContext()
 
 export default function DataProvider({ children }) {
 
-    const [market, setMarket] = useState(null)
+    const [market, setMarket] = useState([])
 
     const getData = async () => {
         const res = await fetch("../market.json")
@@ -15,8 +15,6 @@ export default function DataProvider({ children }) {
     useEffect(() => {
         getData()
     }, [])
-
-    if (!market) return <h1>loading...</h1>
 
     return (
         <DataContext.Provider value={{ market }}>

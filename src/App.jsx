@@ -1,4 +1,3 @@
-
 import '../node_modules/bootstrap/dist/css/bootstrap.css'
 import './assets/styles/css/index.css'
 
@@ -13,7 +12,7 @@ import Home from './views/Home'
 import Profile from './views/Profile'
 import Error404 from './views/Error404'
 import Footer from './components/Footer'
-import UserPublications from './views/UserPublications'
+import Publications from './views/Publications'
 import AddNew from './views/AddNew'
 import Cart from './views/Cart'
 import Item from './views/Item'
@@ -43,7 +42,7 @@ function App() {
         <Route path={`/${user.name}`} element={<Profile />} />
         <Route path={`/${user.name}/favorites`} element={<Favorites />} />
         <Route path={`/${user.name}/cart`} element={<Cart />} />
-        <Route path={`/${user.name}/publications`} element={<UserPublications />} />
+        <Route path={`/${user.name}/publications`} element={<Publications />} />
         <Route path={`/${user.name}/publications/addnew`} element={<AddNew />} />
         <Route path='/*' element={<Error404 />} />
       </Routes>
